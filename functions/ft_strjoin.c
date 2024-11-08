@@ -18,7 +18,7 @@ char    *ft_strjoin(char const *s1, char const *s2)
 
 int main(void)
 {
-    char    *str = ft_strjoin("Hello, ", "World!");
+    char    *str = ft_strjoin("Hello", "World!");
     printf("%s\n", str);
     free(str);
     return (0);
