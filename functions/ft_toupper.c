@@ -6,8 +6,8 @@ int ft_toupper(int c)
     return (c);
 }
 
-int main(void)
-{
-    printf("%c\n", ft_toupper('a'));
-    return (0);
-}
+// int main(void)
+// {
+//     printf("%c\n", ft_toupper('a'));
+//     return (0);
+// }
