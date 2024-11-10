@@ -21,6 +21,9 @@ char    *ft_strdup(const char   *str);
 char    *ft_strcpy(const char   *str);
 size_t  ft_strlcat(char *dst, const char *src, size_t size);
 size_t  ft_strlcpy(char *dst, const char *src, size_t size);
+void    ft_putnbr_fd(int n, int fd);
+void    ft_putstr_fd(char *s, int fd);
+
 
 
 
