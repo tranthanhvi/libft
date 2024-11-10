@@ -1,5 +1,13 @@
 #include "libft.h"
 
+char    ft_to_upper(unsigned int   i, char c)
+{
+    (void)i;
+    if (c >= 'a' && c <= 'z')
+        return (c - 32);
+    return (c);
+}
+
 char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
     char    *str;
@@ -23,7 +31,7 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 int main(void)
 {
-    char    *str = ft_strmapi("hello", ft_toupper);
+    char    *str = ft_strmapi("hello", ft_to_upper);
     printf("%s\n", str);
     free(str);
     return (0);
