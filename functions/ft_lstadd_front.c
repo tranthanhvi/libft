@@ -8,7 +8,7 @@ void ft_lstadd_front(t_list **lst, t_list *new)
         *lst = new;
     }
 }
-
+/* 
 int main(void)
 {
     t_list *head = ft_lstnew("hehe");
@@ -17,4 +17,4 @@ int main(void)
     printf("%s\n", (char *)head->content);
     printf("%s\n", (char *)head->next->content);
     return (0);
-}
+} */
