@@ -1,5 +1,10 @@
 #include "libft.h"
 
+static void del_content(void *content)
+{
+    free(content);
+}
+
 void    ft_lstdelone(t_list *lst, void (*del)(void *))
 {
     if(lst && del)
@@ -9,12 +14,7 @@ void    ft_lstdelone(t_list *lst, void (*del)(void *))
     }
 }
 
-void del_content(void *content)
-{
-    free(content);
-}
-
-void print_list(t_list *lst)
+static void print_list(t_list *lst)
 {
     while (lst)
     {
@@ -22,7 +22,7 @@ void print_list(t_list *lst)
         lst = lst->next;
     }
 }
-int main(void)
+/* int main(void)
 {
     t_list *my_node = ft_lstnew(("hehehe"));
     ft_lstadd_back(&my_node, ft_lstnew(ft_strdup("The one that needs to be deleted")));
@@ -34,4 +34,4 @@ int main(void)
     print_list(my_node);
     return (0);
 
-}
+} */
