@@ -37,5 +37,12 @@ int ft_tolower(int c);
 int ft_toupper(int c);
 void    ft_putchar_fd(char c, int fd);
 
+typedef struct  s_list
+{
+    void    *content;
+    struct  s_list  *next;
+}   t_list;
+
+t_list  *ft_lstnew(void *content);
 
 #endif
