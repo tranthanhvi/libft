@@ -14,7 +14,7 @@ void    ft_lstadd_back(t_list **lst, t_list *new)
     last = ft_lstlast(*lst);
     last->next = new;    
 }
-
+/* 
 int main(void)
 {
     t_list  *head = ft_lstnew("1st");
@@ -27,4 +27,4 @@ int main(void)
         temp = temp->next;
     }
     return (0);
-}
+} */
