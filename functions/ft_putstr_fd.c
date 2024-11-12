@@ -6,9 +6,9 @@ void    ft_putstr_fd(char *s, int fd)
         while (*s)
             ft_putchar_fd(*s++, fd);
 }
-
-// int main(void)
-// {
-//     ft_putstr_fd("Hello  hihii\n", 1);
-//     return (0);
-// }
+/* 
+int main(void)
+{
+    ft_putstr_fd("Hello  hihii\n", 1);
+    return (0);
+} */

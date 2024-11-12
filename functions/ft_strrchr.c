@@ -1,4 +1,5 @@
 #include "libft.h"
+
 char *ft_strrchr(const char *s, int c)
 {
     const char  *last_c = NULL;
@@ -11,9 +12,9 @@ char *ft_strrchr(const char *s, int c)
     }
     return (char *)(c == '\0' ? s : last_c);
 }
-
+/* 
 int main(void)
 {
     printf("%s\n", strrchr("Hello, World!", 'd'));
     printf("%s\n", ft_strrchr("Hello, World!", 'd'));
-}
+} */

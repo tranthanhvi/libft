@@ -1,4 +1,5 @@
 #include "libft.h"
+
 void *ft_memchr(const void *s, int c, size_t n)
 {
     const unsigned char *p;
@@ -12,9 +13,9 @@ void *ft_memchr(const void *s, int c, size_t n)
     }
     return (NULL);
 }
-
+/* 
 int main(void)
 {
     printf("%s\n",  (char *)memchr("Hello, World!", 'o', 13));
     printf("%s\n",  (char *)ft_memchr("Hello, World!", 'o', 13));
-}
+} */

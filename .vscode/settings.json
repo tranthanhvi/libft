@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "ft_lstmap.C": "cpp"
+        "ft_lstmap.C": "cpp",
+        "libft.h": "c"
     }
 }

@@ -1,5 +1,6 @@
 #include "libft.h"
-void    ft_to_uppper_i(unsigned int i, char *c)
+
+static void    ft_to_uppper_i(unsigned int i, char *c)
 {
     (void)i;
     if (c && *c >= 'a' && *c <= 'z')
@@ -17,11 +18,11 @@ void    ft_striteri(char *s, void (*f)(unsigned int, char*))
             i++;
         }
 }
-
+/* 
 int main()
 {
     char    str[] = "thanh";
     ft_striteri(str, ft_to_uppper_i);
     printf("%s\n", str);
     return (0);
-}
+} */

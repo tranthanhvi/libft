@@ -1,4 +1,5 @@
 #include "libft.h"
+
 size_t ft_strlen(const char *s)
 {
     int char_count;
@@ -11,9 +12,9 @@ size_t ft_strlen(const char *s)
     }
     return char_count;
 }
-// #include <stdio.h>
-// int main(void)
-// {
-//     int length = ft_strlen("thanh");
-//     printf("%d\n", length);
-// }
+/* #include <stdio.h>
+int main(void)
+{
+    int length = ft_strlen("thanh");
+    printf("%d\n", length);
+} */

@@ -1,3 +1,5 @@
+#include "libft.h"
+
 int ft_str_is_digit(char *str)
 {
     unsigned int    i;
@@ -15,8 +17,8 @@ int ft_str_is_digit(char *str)
         }
     return (1);
 }
-
-/* #include <unistd.h>
+/* 
+#include <unistd.h>
 int main(void)
 {
     int result = ft_str_is_digit("123");

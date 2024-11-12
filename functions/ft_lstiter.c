@@ -8,11 +8,12 @@ void    ft_lstiter(t_list *lst, void (*f)(void *))
         lst = lst->next;
     }
 }
-/* static void print_content(void *content)
+
+static void print_content(void *content)
 {
     printf("%s\n", (char *)content);
 }
-
+/* 
 int main(void)
 {
     t_list *my_node = ft_lstnew("1st");

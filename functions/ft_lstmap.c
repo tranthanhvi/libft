@@ -41,7 +41,7 @@ t_list  *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
     }
     return (new_list);
 }
-
+/* 
 int main(void)
 {
     t_list  *my_node = ft_lstnew(ft_strdup("hello"));
@@ -59,4 +59,4 @@ int main(void)
         current = current->next;
     }
     return (0);
-}
+} */

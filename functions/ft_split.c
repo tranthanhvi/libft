@@ -1,6 +1,6 @@
 #include "libft.h"
 
-size_t  ft_count_words(char const *s, char c)
+static size_t  ft_count_words(char const *s, char c)
 {
     size_t  count;
 
@@ -20,7 +20,7 @@ size_t  ft_count_words(char const *s, char c)
     return (count);
 }
 
-char    *ft_strndup(const char *s, size_t n)
+static char    *ft_strndup(const char *s, size_t n)
 {
     char    *dup;
     
@@ -62,7 +62,7 @@ char **ft_split(char const *s, char c)
     array[i] = NULL;
     return (array);
 }
-
+/* 
 int main(void)
 {
     char    **result = ft_split("Hello World Again", ' ');
@@ -76,3 +76,4 @@ int main(void)
     free(temp);
     return (0);
 }
+ */

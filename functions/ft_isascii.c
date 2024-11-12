@@ -1,3 +1,5 @@
+#include "libft.h"
+
 int ft_str_is_ascii(char *str)
 {
     if(*str == '\0')
@@ -12,7 +14,7 @@ int ft_str_is_ascii(char *str)
     }
     return (1);
 }
-
+/* 
 int main(void)
 {
     int result = ft_str_is_ascii(NULL);
@@ -21,4 +23,4 @@ int main(void)
         printf("%d\n", 1);
     else if (!result)
         printf("%d\n", 0);
-}
+} */
