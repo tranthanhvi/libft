@@ -1,10 +1,9 @@
-#include <stddef.h>
+#include "libft.h"
 void    ft_bzero(void *s, size_t size)
 {
     ft_memset(s, 0, size);
 }
-
-#include <stdio.h>
+/* 
 int main(void)
 {
     char    buffer[10];
@@ -18,4 +17,4 @@ int main(void)
         pointer++;
     }
     return (0);
-}
+} */

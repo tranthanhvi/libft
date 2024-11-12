@@ -1,3 +1,5 @@
+#include "libft.h"
+
 int ft_str_is_alnum(char *str)
 {
     unsigned int    i;
@@ -15,7 +17,7 @@ int ft_str_is_alnum(char *str)
     }
     return (1);
 }
-#include <stdio.h>
+/* 
 int main(void)
 {
     int result = ft_str_is_alnum("123a;");
@@ -25,4 +27,4 @@ int main(void)
     else
         printf("%d\n", 0);
     return (0);
-}
+} */

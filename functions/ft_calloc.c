@@ -12,7 +12,7 @@ void *ft_calloc(size_t nmemb, size_t size)
         *p++ = 0;
     return (p - nmemb * size);
 }
-
+/* 
 int main(void)
 {
     int *arr = ft_calloc(5, sizeof(int));
@@ -20,3 +20,4 @@ int main(void)
     free(arr);
     return (0);
 }
+ */
