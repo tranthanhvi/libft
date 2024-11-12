@@ -1,5 +1,5 @@
 #include "libft.h"
-void ft_lstclear(t_list **lst, void (*del)(void *))
+void    ft_lstclear(t_list **lst, void (*del)(void *))
 {
     t_list  *temp;
 
@@ -11,7 +11,7 @@ void ft_lstclear(t_list **lst, void (*del)(void *))
     }
     *lst = NULL;
 }
-
+/* 
 void del_content(void *content)
 {
     free(content);
@@ -25,4 +25,4 @@ int main(void)
     ft_lstclear(&my_node, del_content);
     printf("%p\n", (void *)my_node);
 }
-
+ */
