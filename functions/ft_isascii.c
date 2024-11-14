@@ -1,26 +1,12 @@
+int ft_isascii(int c)
+{
+    return (c >= 0 && c <= 127);
+}
+
 #include "libft.h"
 
-int ft_str_is_ascii(char *str)
-{
-    if(*str == '\0')
-        return (1);
-    while (*str)
-    {
-        if (!(*str >= 0 && *str <= 127))
-        {
-            return (0);
-        }
-        str++;
-    }
-    return (1);
-}
-/* 
 int main(void)
-{
-    int result = ft_str_is_ascii(NULL);
-
-    if (result)
-        printf("%d\n", 1);
-    else if (!result)
-        printf("%d\n", 0);
-} */
+{  
+    printf("%d\n", ft_isascii(L'€')); //L prefix is for wide character like '€'
+    printf("%d\n", ft_isascii('a')); 
+}

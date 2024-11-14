@@ -1,14 +1,11 @@
-int ft_str_is_print(char *str)
+int ft_isprint(int c)
 {
-     if(*str == '\0')
-        return (1);
-    while (*str)
-    {
-        if (!(*str >= 32 && *str <= 126))
-        {
-            return (0);
-        }
-        str++;
-    }
-    return (1);
+    return (c >= 32 && c <= 126);
 }
+/* 
+#include "libft.h"
+int main(void)
+{
+    char    c =  '\a';
+    printf("%d\n", ft_isprint(c));
+} */
