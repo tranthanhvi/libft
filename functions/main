@@ -153,8 +153,17 @@ int main(void)
     printf("%s\n", dst);
     return (0);
 } */
+/* 
+    STRLCAT
 
-    // STRLCAT
+int main(void)
+{
+    char dst[20] = "Hello";
+    printf("%u\n", ft_strlcat(dst, ", World", 20));
+    printf("%s\n", dst);
+    return (0);
+
+} */
     // TOUPPER
     // TOLOWER
     // STRRCHR

@@ -1,4 +1,3 @@
-
 #include "libft.h"
 
 size_t  ft_strlcat(char *dst, const char *src, size_t size)
@@ -23,14 +22,5 @@ size_t  ft_strlcat(char *dst, const char *src, size_t size)
     *d = '\0';
     while (*s++)
         slen++;
-    return dlen + slen;
+    return (dlen + slen);
 }
-/* 
-int main(void)
-{
-    char dst[20] = "Hello";
-    printf("%u\n", ft_strlcat(dst, ", World", 20));
-    printf("%s\n", dst);
-    return (0);
-
-} */
