@@ -27,48 +27,53 @@ int main(void)
 }
  */
 
-/*
-	ISALNUM
 
-#include <stdio.h>
+/* 	ISALNUM
+
+
+#include "libft.h"
+
 int main(void)
 {
-    int result = ft_str_is_alnum("123a;");
+    printf("%d\n", ft_isalnum('('));
+    printf("%d\n", ft_isalnum('1'));
+    printf("%d\n", ft_isalnum('a'));
+} */
 
-    if (result)
-        printf("%d\n", 1);
-    else
-        printf("%d\n", 0);
-    return (0);
-}
-*/
 
-/*
+/* 
 	ISASCII
 
-	#include <stdio.h>
+#include "libft.h"
+
+int main(void)
+{  
+    printf("%d\n", ft_isascii(L'€')); //L prefix is for wide character like '€'
+    printf("%d\n", ft_isascii('a')); 
+}
+ */
+
+/*     ISPRINT
+
+#include "libft.h"
 int main(void)
 {
-    int result = ft_str_is_ascii("asdjhsdjag;£");
-
-    if (result)
-        printf("%d\n", 1);
-    else if (!result)
-        printf("%d\n", 0);
-
+    char    c =  '\a';
+    printf("%d\n", ft_isprint(c));
 }
-*/
+ */
 
-/*
+/* 
 	STRLEN
 
-#include <stdio.h>
+#include "libft.h"
+
 int main(void)
 {
     int length = ft_strlen("thanh");
     printf("%d\n", length);
 }
-*/
+ */
 
 /*
 	MEMSET
@@ -90,4 +95,4 @@ int main(void)
 }
 */
 
-    ISPRINT
+

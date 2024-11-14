@@ -10,11 +10,5 @@ size_t ft_strlen(const char *s)
         char_count++;
         s++;
     }
-    return char_count;
+    return (char_count);
 }
-/* #include <stdio.h>
-int main(void)
-{
-    int length = ft_strlen("thanh");
-    printf("%d\n", length);
-} */
