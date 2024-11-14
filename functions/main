@@ -75,24 +75,86 @@ int main(void)
 }
  */
 
-/*
-	MEMSET
 
-#include <stdio.h>
+/* 	MEMSET
+
+
 int main(void)
 {
-    char    buffer[10];
+    char    buffer[11];
     char    *pointer;
 
-    ft_memset(buffer, 'A', 10);
+    ft_memset(buffer, '1', 11);
     pointer = buffer;
-    while (pointer < buffer + 10)
+    while (pointer < buffer + 11)
     {
         printf("%c\n", *pointer);
         pointer++;
     }
     return (0);
 }
-*/
+ */
 
+/*     BZERO
+
+    
+int main(void)
+{
+    char    buffer[10];
+    char    *pointer;    
+    
+    char    buffer1[10];
+    char    *pointer1;
+    
+    ft_bzero(buffer, 10);
+    pointer = buffer;
+    while (pointer < buffer + 10)
+    {
+        printf("%s\n", pointer);
+        pointer++;
+    }
+    
+    printf("%s\n", "Original:");
+
+    bzero(buffer1, 10);
+    pointer1 = buffer1;
+    while (pointer1 < buffer1 + 10)
+    {
+        printf("%s\n", pointer1);
+        pointer1++;
+    }
+    return (0);
+} */
+
+    // MEMCPY
+
+
+/*     MEMMOVE
+
+
+int main(void)
+{
+    char    src[] = "Hello, World!";
+    char    *dest = src + 7;
+//    memmove(dest, src, 6);
+//     printf("%s\n", dest);
+
+    ft_memmove(dest, src, 4);
+    printf("%s\n", dest); 
+    return (0);
+}
+ */
+
+    STRLCPY
+    STRLCAT
+    TOUPPER
+    TOLOWER
+    STRRCHR
+    STRNCMP
+    MEMCHR
+    MEMCMP
+    STRNSTR
+    ATOI
+    CALLOC
+    STRDUP
 

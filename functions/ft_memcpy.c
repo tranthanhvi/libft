@@ -17,7 +17,7 @@ int main(void)
     char    src[] = "Hello, World";
     char    dest[20];
 
-    memcpy(dest, src, 13);
+    memcpy(dest, src, 11);
     printf("%s\n", dest);
     size_t  i = 0;
 

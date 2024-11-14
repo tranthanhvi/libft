@@ -18,22 +18,3 @@ void *ft_memmove(void *dest, const void *src, size_t n)
         return (dest);
     }
 }
-
-int main(void)
-{
-    char    src[] = "Hello, World!";
-    char    *dest = src + 7;
-   /*  memmove(dest, src, 6);
-    printf("%s\n", dest);
-
-    size_t  i = 0;
-    
-    while (i < 20) {
-        dest[i] = '\0';
-        i++;
-    } */
-
-    ft_memmove(dest, src, 6);
-    printf("%s\n", dest);
-    return (0);
-}
