@@ -145,16 +145,24 @@ int main(void)
 }
  */
 
-    STRLCPY
-    STRLCAT
-    TOUPPER
-    TOLOWER
-    STRRCHR
-    STRNCMP
-    MEMCHR
-    MEMCMP
-    STRNSTR
-    ATOI
-    CALLOC
-    STRDUP
+/*     STRLCPY
+int main(void)
+{
+    char    dst[13];
+    printf("%zu\n", ft_strlcpy(dst, "Hello, World!", 10)); //%zu is for size_t since in some system size_t ~ unsigned long - strlcpy copies to size - 1
+    printf("%s\n", dst);
+    return (0);
+} */
+
+    // STRLCAT
+    // TOUPPER
+    // TOLOWER
+    // STRRCHR
+    // STRNCMP
+    // MEMCHR
+    // MEMCMP
+    // STRNSTR
+    // ATOI
+    // CALLOC
+    // STRDUP
 
