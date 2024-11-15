@@ -16,8 +16,21 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
     }
     return (0);
 }
-/* int main(void)
+int main(void)
 {
     printf("%d\n", memcmp("Hello", "Hella", 5));
     printf("%d\n", ft_memcmp("Hello", "Hella", 5));
-} */
+
+    printf("%d\n", memcmp("Hello", "", 1));
+    printf("%d\n", ft_memcmp("Hello", "", 1));
+
+    printf("%d\n", memcmp("Hello", "Hell", 5));
+    printf("%d\n", ft_memcmp("Hello", "Hell", 5));
+
+    printf("%d\n", memcmp("Hello", "Hella", 5));
+    printf("%d\n", ft_memcmp("Hello", "Hella", 5));
+
+    printf("%d\n", memcmp("Hello", "Hella", 5));
+    printf("%d\n", ft_memcmp("Hello", "Hella", 5));
+
+}

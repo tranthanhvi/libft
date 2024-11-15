@@ -272,10 +272,42 @@ int main(void)
 }
  */
 
-    // MEMCHR
+/* 
+    MEMCHR
+
+int main(void)
+{
+    printf("%s\n",  (char *)memchr("Hello, World!", 'x', 13)); // original
+    printf("%s\n",  (char *)ft_memchr("Hello, World!", 'x', 13)); 
+
+    printf("%s\n",  (char *)memchr("Hello, World!", 'o', 0)); // original
+    printf("%s\n",  (char *)ft_memchr("Hello, World!", 'o', 0));
+ 
+
+    printf("%s\n",  (char *)memchr("Hello, World!", '\0', 13)); // original
+    printf("%s\n",  (char *)ft_memchr("Hello, World!", '\0', 13));
+
+    printf("%s\n",  (char *)memchr("Hello, World!", 'o', 13)); // original
+    printf("%s\n",  (char *)ft_memchr("Hello, World!", 'o', 13));
+
+    printf("%s\n",  (char *)memchr("Hello, World!", '!', 13)); // original
+    printf("%s\n",  (char *)ft_memchr("Hello, World!", '!', 13));
+
+}  */
+
     // MEMCMP
+
     // STRNSTR
-    // ATOI
+    
+/*     ATOI
+    
+int main(void)
+{
+    printf("%d\n", atoi("-2147483648"));
+    printf("%d\n", ft_atoi("-2147483648"));
+    return (0);
+}
+  */
     // CALLOC
     // STRDUP
 

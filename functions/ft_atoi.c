@@ -15,11 +15,3 @@ int ft_atoi(const char *nptr)
         result = result * 10 + (*nptr++ - '0');
     return result * sign;
 }
-/* 
-int main(void)
-{
-    printf("%d\n", atoi("-2147483648"));
-    printf("%d\n", ft_atoi("-2147483648"));
-    return (0);
-}
- */
