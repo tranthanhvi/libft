@@ -1,4 +1,5 @@
 #include "libft.h"
+
 static int ft_numlen(int n)
 {
     int len;
@@ -37,11 +38,3 @@ char *ft_itoa(int n)
     }
     return (str);
 }
-/* 
-int main(void)
-{
-    printf("%s\n", ft_itoa(-12345));
-    printf("%s\n", ft_itoa(0));
-    printf("%s\n", ft_itoa(6789));
-    return (0);
-} */

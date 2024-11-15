@@ -354,3 +354,26 @@ int main(void)
     ft_putchar_fd('\n', 1);
     return (0);
 }  */
+
+
+// SUBSTR
+// STRJOIN
+// STRTRIM
+// SPLIT
+
+/* ITOA
+
+int main(void)
+{
+    printf("%s\n", ft_itoa(-12345));
+    printf("%s\n", ft_itoa(0));
+    printf("%s\n", ft_itoa(6789));
+    return (0);
+} */
+
+// STRMAPI
+// STRITERI
+// PUTCHAR_FD
+// PUTSTR_FD
+// PUTENDL_FD
+// PUTNBR_FD
