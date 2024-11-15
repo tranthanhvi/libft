@@ -14,12 +14,3 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
         return (0);
     
 }
-
-int main(void)
-{
-    printf("%d\n", strncmp("Hello", "Hella", 5));
-    printf("%d\n", strncmp("Hello", "Hella", 4));
-    printf("%d\n", ft_strncmp("Hello", "Hella", 5));
-    printf("%d\n", ft_strncmp("Hello", "Hella", 4));
-    return (0);
-}

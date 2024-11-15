@@ -242,7 +242,36 @@ int main(void)
 
 } */
 
-    // STRNCMP
+/*     STRNCMP
+
+
+int main(void)
+{
+    printf("%d\n", strncmp("abc", "abc", 3));
+    printf("%d\n", ft_strncmp("abc", "abc", 3));
+
+    printf("%d\n", strncmp("abcdef", "abcxyz", 3));
+    printf("%d\n", ft_strncmp("abcdef", "abcxyz", 3));
+
+    printf("%d\n", strncmp("abcdef", "abcxyz", 6));
+    printf("%d\n", ft_strncmp("abcdef", "abcxyz", 6));
+
+    printf("%d\n", strncmp("Hello", "hello", 6));
+    printf("%d\n", ft_strncmp("Hello", "hello", 6));
+
+    printf("%d\n", strncmp("", "", 1)); 
+    printf("%d\n", ft_strncmp("", "", 1)); 
+
+    printf("%d\n", strncmp("abc", "", 3));
+    printf("%d\n", ft_strncmp("abc", "", 3));
+
+    printf("%d\n", strncmp("", "abc", 3));
+    printf("%d\n", ft_strncmp("", "abc", 3));
+
+    return (0);
+}
+ */
+
     // MEMCHR
     // MEMCMP
     // STRNSTR
