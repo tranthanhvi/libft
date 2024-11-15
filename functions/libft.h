@@ -7,6 +7,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#include <ctype.h> //delete
+
 // Memory functions
 void    *ft_memset(void *pointer, int value, size_t size);
 void    *ft_memcpy(void *dest, const void *src, size_t n);

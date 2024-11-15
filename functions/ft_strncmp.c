@@ -8,9 +8,13 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
         s2++;
         n--;
     }
-    return n ? (unsigned char )*s1 - (unsigned char )*s2 : 0;
+    if (n)
+        return ((unsigned char )*s1 - (unsigned char )*s2);
+    else
+        return (0);
+    
 }
-/* 
+
 int main(void)
 {
     printf("%d\n", strncmp("Hello", "Hella", 5));
@@ -19,4 +23,3 @@ int main(void)
     printf("%d\n", ft_strncmp("Hello", "Hella", 4));
     return (0);
 }
- */

@@ -145,6 +145,7 @@ int main(void)
 }
  */
 
+
 /*     STRLCPY
 int main(void)
 {
@@ -164,9 +165,83 @@ int main(void)
     return (0);
 
 } */
-    // TOUPPER
-    // TOLOWER
-    // STRRCHR
+
+/*     TOUPPER
+
+    #include "libft.h"
+
+int main(void)
+{
+    //original
+    printf("%c\n", toupper('a'));
+    printf("%c\n", toupper('A'));
+    printf("%c\n", toupper('1'));
+
+    printf("%c\n", ft_toupper('a'));
+    printf("%c\n", ft_toupper('A'));
+    printf("%c\n", ft_toupper('1'));
+    return (0);
+} */
+
+/*     TOLOWER
+
+    #include "libft.h"
+
+int main(void)
+{   //original
+    printf("%c\n", tolower('z'));
+    printf("%c\n", tolower('Z'));
+    printf("%c\n", tolower('1'));
+
+    printf("%c\n", ft_tolower('z'));
+    printf("%c\n", ft_tolower('Z'));
+    printf("%c\n", ft_tolower('1'));
+    return (0);
+} */
+
+/*     STRCHR The strchr() function returns a pointer to the first occurrence of the character c in the string s.
+
+int main(void)
+{   
+    printf("ft_strchr with NULL: %s\n", strchr(NULL, 'a')); //original
+    printf("ft_strchr with NULL: %s\n", ft_strchr(NULL, 'a'));
+    
+    printf("%s\n", strchr("heihei", '\0')); // original
+    printf("%s\n", ft_strchr("heihei", '\0'));
+
+    printf("%s\n", strchr("Hello, World!", 'W')); // original
+    printf("%s\n", ft_strchr("Hello, World!", 'W'));
+
+    printf("%s\n", strchr("Hello, World!", 'x')); // original
+    printf("%s\n", ft_strchr("Hello, World!", 'x'));
+
+
+    return (0);
+}
+ */
+
+
+/* 
+    STRRCHR The strrchr() function returns a pointer to the last occurrence of the character c in the string s.
+
+
+int main(void)
+{
+    printf("%s\n", strrchr(NULL, 'd'));   // ORIGINAL
+    printf("%s\n", ft_strrchr(NULL, 'd'));
+
+    printf("%s\n", strrchr("Hello, World!", '\0'));   // ORIGINAL
+    printf("%s\n", ft_strrchr("Hello, World!", '\0'));
+
+    printf("%s\n", strrchr("Hello, World!", 'o'));   // ORIGINAL
+    printf("%s\n", ft_strrchr("Hello, World!", 'o'));
+
+    printf("%s\n", strrchr("Hello, World!", 'z'));   // ORIGINAL
+    printf("%s\n", ft_strrchr("Hello, World!", 'z'));
+
+
+} */
+
     // STRNCMP
     // MEMCHR
     // MEMCMP
