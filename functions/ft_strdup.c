@@ -18,17 +18,3 @@ char *ft_strdup(const char *s)
     *p = '\0';
     return (dup);
 }
-/* 
-int main(void)
-{
-    char    *str = "Hello, World!";
-    char    *dup = ft_strdup(str);
-
-    
-    printf("%s\n", strdup(str));
-    printf("%s\n", dup);
-    free(dup);
-    free(strdup(str));
-
-    return (0);
-} */
