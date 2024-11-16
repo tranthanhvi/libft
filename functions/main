@@ -154,16 +154,26 @@ int main(void)
     printf("%s\n", dst);
     return (0);
 } */
+
 /* 
     STRLCAT
 
+
 int main(void)
 {
-    char dst[20] = "Hello";
-    printf("%u\n", ft_strlcat(dst, ", World", 20));
+    char    dst[20] = "Hello";
+    const char  *src = ", World";
+    
+    // Using the standard library strlcat
+    printf("%zu\n", strlcat(dst, ", World", 20));  // Note the correct return type (size_t)
     printf("%s\n", dst);
-    return (0);
+    
+    // Using ft_strlcat function
+    char dst2[20] = "Hello";  // Reinitialize dst2
+    printf("%zu\n", ft_strlcat(dst2, ", World", 20));
+    printf("%s\n", dst2);
 
+    return (0);
 } */
 
 /*     TOUPPER
@@ -366,7 +376,16 @@ int main(void)
 }  */
 
 
-// SUBSTR
+/* 
+    SUBSTR
+
+int main(void)
+{
+    char *str = ft_substr("", 1, 8);
+    printf("%s\n", str);
+    free(str);
+    return (0);;
+} */
 // STRJOIN
 // STRTRIM
 // SPLIT
@@ -381,9 +400,64 @@ int main(void)
     return (0);
 } */
 
+
+
 // STRMAPI
 // STRITERI
 // PUTCHAR_FD
 // PUTSTR_FD
 // PUTENDL_FD
 // PUTNBR_FD
+
+// LSTNEW
+// LSTADD_FRONT
+// LSTSIZE
+// LSTLAST
+// LSTADD_BACK
+// LSTDELONE
+// LSTCLEAR
+// LSTITER
+
+
+/*     LSTMAP
+
+static void    del_content(void *content)
+{
+    free(content);
+}
+
+static void    *to_upper(void *content)
+{
+    char    *str;
+    char    *original;
+
+    str = (char *)content;
+    original = str;
+    while (*str)
+    {
+        *str = ft_toupper(*str);
+        str++;
+    }    
+    return (original);
+
+}
+
+
+int main(void)
+{
+    t_list  *my_node = ft_lstnew(ft_strdup("hello"));
+    ft_lstadd_back(&my_node, ft_lstnew(ft_strdup("thank")));
+    ft_lstadd_back(&my_node, ft_lstnew(ft_strdup("you")));
+    ft_lstadd_back(&my_node, ft_lstnew(ft_strdup("veri")));
+    ft_lstadd_back(&my_node, ft_lstnew(ft_strdup("nhieu")));
+    
+    t_list  *new_list = ft_lstmap(my_node, to_upper, del_content);
+    t_list  *current = new_list;
+
+    while (current)
+    {
+        printf("%s\n", current->content);
+        current = current->next;
+    }
+    return (0);
+} */

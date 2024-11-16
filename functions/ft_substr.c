@@ -21,11 +21,3 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     substr[i] = '\0';
     return (substr);  
 }
-/* 
-int main(void)
-{
-    char *str = ft_substr("Hello, World!", 7, 7);
-    printf("%s\n", str);
-    free(str);
-    return (0);;
-} */
