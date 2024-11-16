@@ -27,6 +27,8 @@ char    *ft_strrchr(const char *s, int c);
 size_t  ft_strlcpy(char *dst, const char *src, size_t size);
 void    ft_putnbr_fd(int n, int fd);
 void    ft_putstr_fd(char *s, int fd);
+void    ft_putendl_fd(char *s, int fd);
+
 
 // Character functions
 int ft_isalpha(int c);

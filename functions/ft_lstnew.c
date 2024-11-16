@@ -10,9 +10,3 @@ t_list  *ft_lstnew(void *content)
     new_node->next = NULL;
     return (new_node);
 }
-/* 
-int main(void)
-{
-    t_list *new_node = ft_lstnew("hehehe");
-    printf("%s\n", (char *)new_node->content);
-} */

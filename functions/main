@@ -459,24 +459,205 @@ int main(void)
     return (0);
 } */
 
-// STRITERI
-// PUTCHAR_FD
-// PUTSTR_FD
-// PUTENDL_FD
-// PUTNBR_FD
+/*     
+    STRITERI
 
-// LSTNEW
-// LSTADD_FRONT
-// LSTSIZE
-// LSTLAST
-// LSTADD_BACK
-// LSTDELONE
-// LSTCLEAR
-// LSTITER
+static void    ft_to_uppper_i(unsigned int i, char *c)
+{
+    (void)i;
+    if (c && *c >= 'a' && *c <= 'z')
+        *c -=  32;
+} 
+
+int main()
+{
+    char    str[] = "thanh";
+    ft_striteri(str, ft_to_uppper_i);
+    printf("%s\n", str);
+    return (0);
+} */
+
+/* 
+    PUTCHAR_FD
+
+int main()
+{
+    ft_putchar_fd('A', 1);
+    ft_putchar_fd('\n', 1);
+    return (0);
+} */
+
+/*     PUTSTR_FD
+
+int main(void)
+{
+    ft_putstr_fd("Hello  hihii\n", 1);
+    return (0);
+} */
+
+/*     PUTENDL_FD
+
+int main(void)
+{
+    ft_putendl_fd("Hello", 1);
+    return (0);
+} */
+
+/* 
+    PUTNBR_FD
+
+int main(void)
+{
+    ft_putnbr_fd(123456789, 1);
+    ft_putchar_fd('\n', 1);  
+
+    ft_putnbr_fd(-2147483648, 1);
+    ft_putchar_fd('\n', 1);  
+
+    ft_putnbr_fd(2147483647, 1);
+    ft_putchar_fd('\n', 1);  
+
+} */
+
+/*     LSTNEW
+
+int main(void)
+{
+    t_list *new_node = ft_lstnew("hehehe");
+    printf("%s\n", (char *)new_node->content);
+    printf("%s\n", (char *)new_node->next);
+} */
+
+/*     
+    LSTADD_FRONT
+
+int main(void)
+{
+    t_list *head = ft_lstnew("hehe");
+    printf("%s\n", (char *)head->content);
+
+    t_list *new_head = ft_lstnew("hihi");
+    ft_lstadd_front(&head, new_head);
+    printf("%s\n", (char *)head->content);
+    printf("%s\n", (char *)head->next->content); // now the head is after the new_head
+    return (0);
+} */
+    
+/*     LSTSIZE
+
+int main(void)
+{
+    t_list  *my_node = ft_lstnew("1");
+    ft_lstadd_front(&my_node, ft_lstnew("2"));
+    ft_lstadd_front(&my_node, ft_lstnew("3"));
+    ft_lstadd_front(&my_node, ft_lstnew("3"));
+    ft_lstadd_front(&my_node, ft_lstnew("3"));
+    printf("%d\n", ft_lstsize(my_node));
+    return (0);
+} */
+
+/*     LSTLAST
+
+    int main(void)
+{
+    t_list  *my_node = ft_lstnew("last");
+    ft_lstadd_front(&my_node, ft_lstnew("2"));
+    ft_lstadd_front(&my_node, ft_lstnew("3"));
+    ft_lstadd_front(&my_node, ft_lstnew("3"));
+    ft_lstadd_front(&my_node, ft_lstnew("first"));
+    printf("%s\n", (char *)ft_lstlast(my_node)->content);
+    return (0);
+}
+  */   
+    
+/*     LSTADD_BACK
 
 
-/*     LSTMAP
+int main(void)
+{
+    t_list  *head = ft_lstnew("1st");
+    ft_lstadd_back(&head, ft_lstnew("2nd"));
+    ft_lstadd_back(&head, ft_lstnew("3rd"));
+    t_list  *temp = head;
+    while (temp)
+    {
+        printf("%s\n", (char *)temp->content);
+        temp = temp->next;
+    }
+    return (0);
+} */
 
+/*     LSTDELONE
+
+
+static void print_list(t_list *lst)
+{
+    while (lst)
+    {
+        printf("%s\n", (char *)lst->content);
+        lst = lst->next;
+    }
+}
+
+
+static void del_content(void *content)
+{
+    free(content);
+}
+
+int main(void)
+{
+    t_list *my_node = ft_lstnew(("hehehe"));
+    ft_lstadd_back(&my_node, ft_lstnew(ft_strdup("The one that needs to be deleted")));
+    ft_lstadd_back(&my_node, ft_lstnew("hehehe"));
+    ft_lstadd_back(&my_node, ft_lstnew("hehehe"));
+    print_list(my_node);
+    ft_lstdelone(my_node->next, del_content);
+    printf("After deletion:\n"); // seg fault would show since now the content is NULL
+    print_list(my_node);
+    return (0);
+
+} */
+
+/*     LSTCLEAR
+
+
+void del_content(void *content)
+{
+    free(content);
+}
+
+int main(void)
+{
+    t_list *my_node = ft_lstnew(strdup("1"));
+    ft_lstadd_back(&my_node, ft_lstnew(strdup("2")));
+    ft_lstadd_back(&my_node, ft_lstnew(strdup("3")));
+
+    ft_lstclear(&my_node, del_content);
+    printf("%p\n", (void *)my_node); // print (nil) which shows when the lst is NULL
+}
+
+ */
+
+/*     LSTITER
+
+
+static void print_content(void *content)
+{
+    printf("%s\n", (char *)content);
+}
+
+int main(void)
+{
+    t_list *my_node = ft_lstnew("1st");
+    ft_lstadd_back(&my_node, ft_lstnew("2nd"));
+    ft_lstadd_back(&my_node, ft_lstnew("3rd"));
+    ft_lstiter(my_node, print_content);
+} */
+
+/* 
+    LSTMAP
+    
 static void    del_content(void *content)
 {
     free(content);
@@ -512,7 +693,7 @@ int main(void)
 
     while (current)
     {
-        printf("%s\n", current->content);
+        printf("%s\n", (char *)current->content);
         current = current->next;
     }
     return (0);
