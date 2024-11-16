@@ -1,10 +1,5 @@
 #include "libft.h"
 
-static void del_content(void *content)
-{
-    free(content);
-}
-
 void    ft_lstdelone(t_list *lst, void (*del)(void *))
 {
     if(lst && del)
@@ -14,14 +9,21 @@ void    ft_lstdelone(t_list *lst, void (*del)(void *))
     }
 }
 
-static void print_list(t_list *lst)
+/* static void print_list(t_list *lst)
 {
     while (lst)
     {
         printf("%s\n", (char *)lst->content);
         lst = lst->next;
     }
+} */
+/* 
+
+static void del_content(void *content)
+{
+    free(content);
 }
+ */
 /* int main(void)
 {
     t_list *my_node = ft_lstnew(("hehehe"));

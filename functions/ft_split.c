@@ -39,7 +39,6 @@ char **ft_split(char const *s, char c)
     size_t  word_len;
 
     i = 0;
-
     array = malloc((ft_count_words(s, c) + 1) * sizeof(char *));
     if (!array)
         return (NULL);
@@ -61,18 +60,4 @@ char **ft_split(char const *s, char c)
     }
     array[i] = NULL;
     return (array);
-}
-
-int main(void)
-{
-    char    **result = ft_split("Hello World Again", ' ');
-    char    **temp = result;
-    while (*result)
-    {
-        printf("%s\n", *result);
-        free(*result);
-        result++;
-    }
-    free(temp);
-    return (0);
 }

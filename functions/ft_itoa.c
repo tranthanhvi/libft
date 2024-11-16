@@ -3,7 +3,11 @@
 static int ft_numlen(int n)
 {
     int len;
-    len = (n <= 0) ? 1 : 0;
+
+    if (n <= 0)
+        len = 1;
+    else 
+        len = 0;
     while (n)
     {
         len++;

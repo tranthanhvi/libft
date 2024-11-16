@@ -410,7 +410,23 @@ int main(void)
     return (0);
 } */
 
-// SPLIT
+/* 
+    SPLIT
+
+int main(void)
+{
+    char    **result = ft_split("Hello World Again", ' ');
+    char    **temp = result;
+    while (*result)
+    {
+        printf("%s\n", *result);
+        free(*result);
+        result++;
+    }
+    free(temp);
+    return (0);
+} */
+
 
 /* ITOA
 
@@ -420,11 +436,29 @@ int main(void)
     printf("%s\n", ft_itoa(0));
     printf("%s\n", ft_itoa(6789));
     return (0);
+}
+ */
+
+/* 
+    STRMAPI
+
+static char    ft_to_upper(unsigned int   i, char c)
+{
+    (void)i;
+    if (c >= 'a' && c <= 'z')
+        return (c - 32);
+    return (c);
+}
+
+
+int main(void)
+{
+    char    *str = ft_strmapi("hello hhihihihihi", ft_to_upper);
+    printf("%s\n", str);
+    free(str);
+    return (0);
 } */
 
-
-
-// STRMAPI
 // STRITERI
 // PUTCHAR_FD
 // PUTSTR_FD

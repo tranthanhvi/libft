@@ -9,7 +9,7 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
     if (!s || !f)
         return (NULL);
-    str = (char *)malloc(strlen(s) + 1);
+    str = (char *)malloc(ft_strlen(s) + 1);
     if (!str)
         return (NULL);
     while (s[i])
@@ -20,21 +20,3 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     str[i] = '\0';
     return (str);
 }
-/* 
-
-static char    ft_to_upper(unsigned int   i, char c)
-{
-    (void)i;
-    if (c >= 'a' && c <= 'z')
-        return (c - 32);
-    return (c);
-} */
-
-/* 
-int main(void)
-{
-    char    *str = ft_strmapi("hello", ft_to_upper);
-    printf("%s\n", str);
-    free(str);
-    return (0);
-} */
