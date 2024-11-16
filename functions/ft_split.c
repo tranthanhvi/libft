@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 15:54:05 by thantran          #+#    #+#             */
+/*   Updated: 2024/11/16 15:54:17 by thantran         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static size_t  ft_count_words(char const *s, char c)
@@ -19,7 +31,6 @@ static size_t  ft_count_words(char const *s, char c)
     }
     return (count);
 }
-
 static char    *ft_strndup(const char *s, size_t n)
 {
     char    *dup;
@@ -31,7 +42,6 @@ static char    *ft_strndup(const char *s, size_t n)
     dup[n] = '\0';
     return (dup);
 }
-
 char **ft_split(char const *s, char c)
 {
     char **array;

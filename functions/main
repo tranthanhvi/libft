@@ -2,17 +2,16 @@
 // cc -Wall -Werror -Wextra
 /*
 	ISALPHA
-
-#include <unistd.h>
+#include "libft.h"
 int	main(void)
 {
 	int	result;
 	
-	result = ft_str_is_alpha("abc");
+	result = ft_isalpha('A');
 	if (result == 0)
-		write(1, "0", 1);
+        printf("%d\n", 0);
 	else if (result == 1)
-		write (1, "1", 1);
+        printf("%d\n", 1);
 	return (0);
 }
 */
@@ -306,16 +305,35 @@ int main(void)
 
 }  */
 
-    // MEMCMP
-
-/*     STRNSTR
+/*     MEMCMP
 
 int main(void)
 {
-    printf("%s\n", strnstr("Hello, World!", "World", 10));
-    printf("%s\n", ft_strnstr("Hello, World!", "World", 10));
+    printf("%d\n", memcmp("Hello", "Hella", 5));
+    printf("%d\n", ft_memcmp("Hello", "Hella", 5));
 
-    printf("%s\n", strnstr("Hello, World!", "World\0asd", 10));
+    printf("%d\n", memcmp("Hello", "", 1));
+    printf("%d\n", ft_memcmp("Hello", "", 1));
+
+    printf("%d\n", memcmp("Hello", "Hell", 5));
+    printf("%d\n", ft_memcmp("Hello", "Hell", 5));
+
+    printf("%d\n", memcmp("Hello", "Hella", 5));
+    printf("%d\n", ft_memcmp("Hello", "Hella", 5));
+
+    printf("%d\n", memcmp("Hello", "Hella", 5));
+    printf("%d\n", ft_memcmp("Hello", "Hella", 5));
+
+} */
+/*     STRNSTR
+
+
+int main(void)
+{
+    printf("%s\n", ft_strnstr("Hello, World!", "World", 10));
+    
+    printf("%s\n", ft_strnstr("Hello, World!", "World", 15));
+
     printf("%s\n", ft_strnstr("Hello, World!", "World\0asd", 10));
     return (0);
 } */
@@ -657,7 +675,7 @@ int main(void)
 
 /* 
     LSTMAP
-    
+
 static void    del_content(void *content)
 {
     free(content);

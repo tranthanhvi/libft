@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 15:51:20 by thantran          #+#    #+#             */
+/*   Updated: 2024/11/16 15:57:09 by thantran         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int ft_memcmp(const void *s1, const void *s2, size_t n)
@@ -15,22 +27,4 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
         p2++;
     }
     return (0);
-}
-int main(void)
-{
-    printf("%d\n", memcmp("Hello", "Hella", 5));
-    printf("%d\n", ft_memcmp("Hello", "Hella", 5));
-
-    printf("%d\n", memcmp("Hello", "", 1));
-    printf("%d\n", ft_memcmp("Hello", "", 1));
-
-    printf("%d\n", memcmp("Hello", "Hell", 5));
-    printf("%d\n", ft_memcmp("Hello", "Hell", 5));
-
-    printf("%d\n", memcmp("Hello", "Hella", 5));
-    printf("%d\n", ft_memcmp("Hello", "Hella", 5));
-
-    printf("%d\n", memcmp("Hello", "Hella", 5));
-    printf("%d\n", ft_memcmp("Hello", "Hella", 5));
-
 }

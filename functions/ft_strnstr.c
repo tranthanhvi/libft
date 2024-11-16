@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 15:57:29 by thantran          #+#    #+#             */
+/*   Updated: 2024/11/16 15:57:31 by thantran         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char *ft_strnstr(const char *big, const char *little, size_t len)
@@ -25,14 +37,4 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
         len--;
     }
     return (NULL);
-}
-
-int main(void)
-{
-    printf("%s\n", ft_strnstr("Hello, World!", "World", 10));
-    
-    printf("%s\n", ft_strnstr("Hello, World!", "World", 15));
-
-    printf("%s\n", ft_strnstr("Hello, World!", "World\0asd", 10));
-    return (0);
 }
