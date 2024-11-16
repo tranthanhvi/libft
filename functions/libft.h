@@ -22,6 +22,8 @@ size_t ft_strlen(const char *str);
 char    *ft_strdup(const char   *str);
 char    *ft_strcpy(const char   *str);
 size_t  ft_strlcat(char *dst, const char *src, size_t size);
+char    *ft_strchr(const char *s, int c);
+char    *ft_strrchr(const char *s, int c);
 size_t  ft_strlcpy(char *dst, const char *src, size_t size);
 void    ft_putnbr_fd(int n, int fd);
 void    ft_putstr_fd(char *s, int fd);

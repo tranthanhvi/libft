@@ -62,7 +62,7 @@ char **ft_split(char const *s, char c)
     array[i] = NULL;
     return (array);
 }
-/* 
+
 int main(void)
 {
     char    **result = ft_split("Hello World Again", ' ');
@@ -76,4 +76,3 @@ int main(void)
     free(temp);
     return (0);
 }
- */

@@ -26,20 +26,3 @@ size_t  ft_strlcat(char *dst, const char *src, size_t size)
     *d = '\0';
     return (dlen + slen);
 }
-/* 
-int main(void)
-{
-    char    dst[20] = "Hello";
-    const char  *src = ", World";
-    size_t  size = 20;
-    // Using the standard library strlcat
-    printf("%zu\n", strlcat(dst, ", World!", size));  // Note the correct return type (size_t)
-    printf("%s\n", dst);
-    
-    // Using ft_strlcat function
-    char dst2[20] = "Hello";  // Reinitialize dst2
-    printf("%zu\n", ft_strlcat(dst2, ", World!", size));
-    printf("%s\n", dst2);
-
-    return (0);
-} */

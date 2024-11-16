@@ -159,18 +159,19 @@ int main(void)
     STRLCAT
 
 
+
 int main(void)
 {
     char    dst[20] = "Hello";
     const char  *src = ", World";
-    
+    size_t  size = 20;
     // Using the standard library strlcat
-    printf("%zu\n", strlcat(dst, ", World", 20));  // Note the correct return type (size_t)
+    printf("%zu\n", strlcat(dst, ", World!", size));  // Note the correct return type (size_t)
     printf("%s\n", dst);
     
     // Using ft_strlcat function
     char dst2[20] = "Hello";  // Reinitialize dst2
-    printf("%zu\n", ft_strlcat(dst2, ", World", 20));
+    printf("%zu\n", ft_strlcat(dst2, ", World!", size));
     printf("%s\n", dst2);
 
     return (0);
@@ -398,7 +399,16 @@ int main(void)
     return (0);
 } */
 
-// STRTRIM
+/* 
+    STRTRIM
+
+int main(void)
+{
+    char *str = ft_strtrim("HehEhEHe", "He");
+    printf("%s\n", str);
+    free(str);
+    return (0);
+} */
 
 // SPLIT
 
