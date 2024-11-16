@@ -11,7 +11,7 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
     }
     return (dest);
  }
-/* 
+
 int main(void)
 {
     char    src[] = "Hello, World";
@@ -28,4 +28,4 @@ int main(void)
     ft_memcpy(dest, src, 11);
     printf("%s\n", dest);
     return (0);
-} */
+}
