@@ -30,8 +30,8 @@ static int	ft_numlen(int n)
 
 char	*ft_itoa(int n)
 {
-	char		*str;
-	int			len;
+	char			*str;
+	int		len;
 	unsigned int	num;
 
 	len = ft_numlen(n);
