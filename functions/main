@@ -1,5 +1,8 @@
 // Norminette -R CheckDefine
 // cc -Wall -Werror -Wextra
+
+// #include <ctype.h> //delete
+
 /*
 	ISALPHA
 #include "libft.h"
