@@ -6,7 +6,7 @@
 /*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:55:49 by thantran          #+#    #+#             */
-/*   Updated: 2024/11/16 15:55:49 by thantran         ###   ########.fr       */
+/*   Updated: 2024/11/18 20:00:45 by thantran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		str[i] = f(i, s[i]);
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }
