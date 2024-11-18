@@ -49,30 +49,12 @@ SRCS_BONUS = ft_lstnew_bonus.c \
 OBJECT = $(SRCS:%.c=%.o)
 OBJECT_BONUS = $(SRCS_BONUS:%.c=%.o)
 
-# Define the library name, .a is a static library, which mean the files are combined at compiling time
 NAME = libft.a
 
-# The default target
 all:  $(NAME)
-
-# Rule to create the .c files to .o files
-# Compile or assemble the source files, but do not link. The linking stage simply is not done.
-# The ultimate output is in the form of an object file for each source file.
-# $@ is the name of the target being generated, and $< the first prerequisite
-# -o file Place the primary output in file file, 
-# If -o is not specified, the default is to put an executable file in a.out
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@ 
-
-# Create the actual library
-# ar maintain archive libraries, which is a collection of files, typically object files.
-#  create a new library, add members to an existing library, delete members from a library,
-#  extract members from a library, and print a table of contents for a library.
-#  -r Replaces or adds file to archive.
-#  -c Suppresses the message that is normally printed when ar creates a new archive file
-#  -s Regenerates the external symbol table regardless of whether the command modifies the archive.
-#  -rcs rcs can be seen to mean replace, create, sort
 
 $(NAME): $(OBJECT)
 	ar rcs $(NAME) $^
@@ -80,25 +62,17 @@ $(NAME): $(OBJECT)
 bonus: $(OBJECT) $(OBJECT_BONUS)
 	ar rcs $(NAME) $^
 
-# Clean: removes the output of other targets
 clean:
 	rm -f $(OBJECT) $(OBJECT_BONUS)
 
-# Fclean: remove all generrated files
 fclean: clean
 	rm -f $(NAME)
 
-# Rebuild the project
 re: fclean all
 
 so:
 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(SRCS_BONUS)
 	gcc -nostartfiles -shared -o libft.so $(OBJECT) $(OBJECT_BONUS)
-# Bonus rules
-# ar -u : If you would like to insert only those
-# of the files you list that are newer than existing members of the same names
-# only use with ar -r
-
 .PHONY: all clean fclean re bonus
 
 

@@ -6,11 +6,9 @@
 /*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:49:24 by thantran          #+#    #+#             */
-/*   Updated: 2024/11/18 17:49:27 by thantran         ###   ########.fr       */
+/*   Updated: 2024/11/18 19:16:24 by thantran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isalpha(int c)
 {
