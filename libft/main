@@ -1,0 +1,740 @@
+// Norminette -R CheckDefine
+// cc -Wall -Werror -Wextra
+
+// #include <ctype.h> //delete
+
+/*
+	ISALPHA
+#include "libft.h"
+int	main(void)
+{
+	int	result;
+	
+	result = ft_isalpha('A');
+	if (result == 0)
+        printf("%d\n", 0);
+	else if (result == 1)
+        printf("%d\n", 1);
+	return (0);
+}
+*/
+
+ 
+/* 	ISDIGIT
+
+#include "libft.h"
+int main(void)
+{
+    printf("%d\n",ft_isdigit("1"));
+}
+ */
+
+
+/* 	ISALNUM
+
+
+#include "libft.h"
+
+int main(void)
+{
+    printf("%d\n", ft_isalnum('('));
+    printf("%d\n", ft_isalnum('1'));
+    printf("%d\n", ft_isalnum('a'));
+} */
+
+
+/* 
+	ISASCII
+
+#include "libft.h"
+
+int main(void)
+{  
+    printf("%d\n", ft_isascii(L'€')); //L prefix is for wide character like '€'
+    printf("%d\n", ft_isascii('a')); 
+}
+ */
+
+/*     ISPRINT
+
+#include "libft.h"
+int main(void)
+{
+    char    c =  '\a';
+    printf("%d\n", ft_isprint(c));
+}
+ */
+
+/* 
+	STRLEN
+
+#include "libft.h"
+
+int main(void)
+{
+    int length = ft_strlen("thanh");
+    printf("%d\n", length);
+}
+ */
+
+
+/* 	MEMSET
+
+
+int main(void)
+{
+    char    buffer[11];
+    char    *pointer;
+
+    ft_memset(buffer, '1', 11);
+    pointer = buffer;
+    while (pointer < buffer + 11)
+    {
+        printf("%c\n", *pointer);
+        pointer++;
+    }
+    return (0);
+}
+ */
+
+/*     BZERO
+
+    
+int main(void)
+{
+    char    buffer[10];
+    char    *pointer;    
+    
+    char    buffer1[10];
+    char    *pointer1;
+    
+    ft_bzero(buffer, 10);
+    pointer = buffer;
+    while (pointer < buffer + 10)
+    {
+        printf("%s\n", pointer);
+        pointer++;
+    }
+    
+    printf("%s\n", "Original:");
+
+    bzero(buffer1, 10);
+    pointer1 = buffer1;
+    while (pointer1 < buffer1 + 10)
+    {
+        printf("%s\n", pointer1);
+        pointer1++;
+    }
+    return (0);
+} */
+
+/*     MEMCPY
+
+    
+int	main(void)
+{
+char    src[] = "Hello, World";
+char    dest[20];
+
+    memcpy(dest, src, 11);
+    printf("%s\n", dest);
+    size_t  i = 0;
+
+    while (i < 20) {
+        dest[i] = '\0';
+        i++;
+    }
+    ft_memcpy(dest, src, 11);
+    printf("%s\n", dest);
+    return (0);
+} */
+
+
+/*     MEMMOVE
+
+
+int main(void)
+{
+    char    src[] = "Hello, World!";
+    char    *dest = src + 7;
+//    memmove(dest, src, 6);
+//     printf("%s\n", dest);
+
+    ft_memmove(dest, src, 4);
+    printf("%s\n", dest); 
+    return (0);
+}
+ */
+
+
+/*     STRLCPY
+int main(void)
+{
+    char    dst[13];
+    printf("%zu\n", ft_strlcpy(dst, "Hello, World!", 10)); //%zu is for size_t since in some system size_t ~ unsigned long - strlcpy copies to size - 1
+    printf("%s\n", dst);
+    return (0);
+} */
+
+/* 
+    STRLCAT
+
+
+
+int main(void)
+{
+    char    dst[20] = "Hello";
+    const char  *src = ", World";
+    size_t  size = 20;
+    // Using the standard library strlcat
+    printf("%zu\n", strlcat(dst, ", World!", size));  // Note the correct return type (size_t)
+    printf("%s\n", dst);
+    
+    // Using ft_strlcat function
+    char dst2[20] = "Hello";  // Reinitialize dst2
+    printf("%zu\n", ft_strlcat(dst2, ", World!", size));
+    printf("%s\n", dst2);
+
+    return (0);
+} */
+
+/*     TOUPPER
+
+    #include "libft.h"
+
+int main(void)
+{
+    //original
+    printf("%c\n", toupper('a'));
+    printf("%c\n", toupper('A'));
+    printf("%c\n", toupper('1'));
+
+    printf("%c\n", ft_toupper('a'));
+    printf("%c\n", ft_toupper('A'));
+    printf("%c\n", ft_toupper('1'));
+    return (0);
+} */
+
+/*     TOLOWER
+
+    #include "libft.h"
+
+int main(void)
+{   //original
+    printf("%c\n", tolower('z'));
+    printf("%c\n", tolower('Z'));
+    printf("%c\n", tolower('1'));
+
+    printf("%c\n", ft_tolower('z'));
+    printf("%c\n", ft_tolower('Z'));
+    printf("%c\n", ft_tolower('1'));
+    return (0);
+} */
+
+/*     STRCHR The strchr() function returns a pointer to the first occurrence of the character c in the string s.
+
+int main(void)
+{   
+    printf("ft_strchr with NULL: %s\n", strchr(NULL, 'a')); //original
+    printf("ft_strchr with NULL: %s\n", ft_strchr(NULL, 'a'));
+    
+    printf("%s\n", strchr("heihei", '\0')); // original
+    printf("%s\n", ft_strchr("heihei", '\0'));
+
+    printf("%s\n", strchr("Hello, World!", 'W')); // original
+    printf("%s\n", ft_strchr("Hello, World!", 'W'));
+
+    printf("%s\n", strchr("Hello, World!", 'x')); // original
+    printf("%s\n", ft_strchr("Hello, World!", 'x'));
+
+
+    return (0);
+}
+ */
+
+
+/* 
+    STRRCHR The strrchr() function returns a pointer to the last occurrence of the character c in the string s.
+
+
+int main(void)
+{
+    printf("%s\n", strrchr(NULL, 'd'));   // ORIGINAL
+    printf("%s\n", ft_strrchr(NULL, 'd'));
+
+    printf("%s\n", strrchr("Hello, World!", '\0'));   // ORIGINAL
+    printf("%s\n", ft_strrchr("Hello, World!", '\0'));
+
+    printf("%s\n", strrchr("Hello, World!", 'o'));   // ORIGINAL
+    printf("%s\n", ft_strrchr("Hello, World!", 'o'));
+
+    printf("%s\n", strrchr("Hello, World!", 'z'));   // ORIGINAL
+    printf("%s\n", ft_strrchr("Hello, World!", 'z'));
+
+
+} */
+
+/*     STRNCMP
+
+
+int main(void)
+{
+    printf("%d\n", strncmp("abc", "abc", 3));
+    printf("%d\n", ft_strncmp("abc", "abc", 3));
+
+    printf("%d\n", strncmp("abcdef", "abcxyz", 3));
+    printf("%d\n", ft_strncmp("abcdef", "abcxyz", 3));
+
+    printf("%d\n", strncmp("abcdef", "abcxyz", 6));
+    printf("%d\n", ft_strncmp("abcdef", "abcxyz", 6));
+
+    printf("%d\n", strncmp("Hello", "hello", 6));
+    printf("%d\n", ft_strncmp("Hello", "hello", 6));
+
+    printf("%d\n", strncmp("", "", 1)); 
+    printf("%d\n", ft_strncmp("", "", 1)); 
+
+    printf("%d\n", strncmp("abc", "", 3));
+    printf("%d\n", ft_strncmp("abc", "", 3));
+
+    printf("%d\n", strncmp("", "abc", 3));
+    printf("%d\n", ft_strncmp("", "abc", 3));
+
+    return (0);
+}
+ */
+
+/* 
+    MEMCHR
+
+int main(void)
+{
+    printf("%s\n",  (char *)memchr("Hello, World!", 'x', 13)); // original
+    printf("%s\n",  (char *)ft_memchr("Hello, World!", 'x', 13)); 
+
+    printf("%s\n",  (char *)memchr("Hello, World!", 'o', 0)); // original
+    printf("%s\n",  (char *)ft_memchr("Hello, World!", 'o', 0));
+ 
+
+    printf("%s\n",  (char *)memchr("Hello, World!", '\0', 13)); // original
+    printf("%s\n",  (char *)ft_memchr("Hello, World!", '\0', 13));
+
+    printf("%s\n",  (char *)memchr("Hello, World!", 'o', 13)); // original
+    printf("%s\n",  (char *)ft_memchr("Hello, World!", 'o', 13));
+
+    printf("%s\n",  (char *)memchr("Hello, World!", '!', 13)); // original
+    printf("%s\n",  (char *)ft_memchr("Hello, World!", '!', 13));
+
+}  */
+
+/*     MEMCMP
+
+int main(void)
+{
+    printf("%d\n", memcmp("Hello", "Hella", 5));
+    printf("%d\n", ft_memcmp("Hello", "Hella", 5));
+
+    printf("%d\n", memcmp("Hello", "", 1));
+    printf("%d\n", ft_memcmp("Hello", "", 1));
+
+    printf("%d\n", memcmp("Hello", "Hell", 5));
+    printf("%d\n", ft_memcmp("Hello", "Hell", 5));
+
+    printf("%d\n", memcmp("Hello", "Hella", 5));
+    printf("%d\n", ft_memcmp("Hello", "Hella", 5));
+
+    printf("%d\n", memcmp("Hello", "Hella", 5));
+    printf("%d\n", ft_memcmp("Hello", "Hella", 5));
+
+} */
+/*     STRNSTR
+
+
+int main(void)
+{
+    printf("%s\n", ft_strnstr("Hello, World!", "World", 10));
+    
+    printf("%s\n", ft_strnstr("Hello, World!", "World", 15));
+
+    printf("%s\n", ft_strnstr("Hello, World!", "World\0asd", 10));
+    return (0);
+} */
+
+/*     ATOI
+    
+int main(void)
+{
+    printf("%d\n", atoi("-2147483648"));
+    printf("%d\n", ft_atoi("-2147483648"));
+    return (0);
+}
+  */
+
+/* 
+    CALLOC - o allocate a block of memory for an array of elements and initialize the memory to zero.
+
+
+int main(void)
+{
+    int *arr1 = calloc(5, sizeof(int));
+    int *arr2 = ft_calloc(5, sizeof(int));
+    printf("%d\n", arr1[4]);
+    printf("%d\n", arr2[4]);
+    free(arr1);
+    free(arr2);
+    return (0);
+} */
+
+/*     STRDUP
+
+
+int main(void)
+{
+    char    *str = "Hello, World!";
+    char    *dup_original = strdup(str);
+    char    *dup = ft_strdup(str);
+
+    
+    printf("%s\n", dup_original);
+    printf("%s\n", dup);
+    
+    free(dup);
+    free(dup_original);
+
+    return (0);
+} */
+
+
+/* 
+    FT_PUTNBR_FD
+
+
+int main(void)
+{
+    ft_putnbr_fd(-2147483648, 1);
+    ft_putchar_fd('\n', 1);
+    return (0);
+}  */
+
+
+/* 
+    SUBSTR
+
+int main(void)
+{
+    char *str = ft_substr("", 1, 8);
+    printf("%s\n", str);
+    free(str);
+    return (0);;
+} */
+
+    
+/*     STRJOIN
+
+int main(void)
+{
+    char    *str = ft_strjoin("Hello", " World!");
+    printf("%s\n", str);
+    free(str);
+    return (0);
+} */
+
+/* 
+    STRTRIM
+
+int main(void)
+{
+    char *str = ft_strtrim("HehEhEHe", "He");
+    printf("%s\n", str);
+    free(str);
+    return (0);
+} */
+
+/* 
+    SPLIT
+
+int main(void)
+{
+    char    **result = ft_split("Hello World Again", ' ');
+    char    **temp = result;
+    while (*result)
+    {
+        printf("%s\n", *result);
+        free(*result);
+        result++;
+    }
+    free(temp);
+    return (0);
+} */
+
+
+/* ITOA
+
+int main(void)
+{
+    printf("%s\n", ft_itoa(-12345));
+    printf("%s\n", ft_itoa(0));
+    printf("%s\n", ft_itoa(6789));
+    return (0);
+}
+ */
+
+/* 
+    STRMAPI
+
+static char    ft_to_upper(unsigned int   i, char c)
+{
+    (void)i;
+    if (c >= 'a' && c <= 'z')
+        return (c - 32);
+    return (c);
+}
+
+
+int main(void)
+{
+    char    *str = ft_strmapi("hello hhihihihihi", ft_to_upper);
+    printf("%s\n", str);
+    free(str);
+    return (0);
+} */
+
+/*     
+    STRITERI
+
+static void    ft_to_uppper_i(unsigned int i, char *c)
+{
+    (void)i;
+    if (c && *c >= 'a' && *c <= 'z')
+        *c -=  32;
+} 
+
+int main()
+{
+    char    str[] = "thanh";
+    ft_striteri(str, ft_to_uppper_i);
+    printf("%s\n", str);
+    return (0);
+} */
+
+/* 
+    PUTCHAR_FD
+
+int main()
+{
+    ft_putchar_fd('A', 1);
+    ft_putchar_fd('\n', 1);
+    return (0);
+} */
+
+/*     PUTSTR_FD
+
+int main(void)
+{
+    ft_putstr_fd("Hello  hihii\n", 1);
+    return (0);
+} */
+
+/*     PUTENDL_FD
+
+int main(void)
+{
+    ft_putendl_fd("Hello", 1);
+    return (0);
+} */
+
+/* 
+    PUTNBR_FD
+
+int main(void)
+{
+    ft_putnbr_fd(123456789, 1);
+    ft_putchar_fd('\n', 1);  
+
+    ft_putnbr_fd(-2147483648, 1);
+    ft_putchar_fd('\n', 1);  
+
+    ft_putnbr_fd(2147483647, 1);
+    ft_putchar_fd('\n', 1);  
+
+} */
+
+/*     LSTNEW
+
+int main(void)
+{
+    t_list *new_node = ft_lstnew("hehehe");
+    printf("%s\n", (char *)new_node->content);
+    printf("%s\n", (char *)new_node->next);
+} */
+
+/*     
+    LSTADD_FRONT
+
+int main(void)
+{
+    t_list *head = ft_lstnew("hehe");
+    printf("%s\n", (char *)head->content);
+
+    t_list *new_head = ft_lstnew("hihi");
+    ft_lstadd_front(&head, new_head);
+    printf("%s\n", (char *)head->content);
+    printf("%s\n", (char *)head->next->content); // now the head is after the new_head
+    return (0);
+} */
+    
+/*     LSTSIZE
+
+int main(void)
+{
+    t_list  *my_node = ft_lstnew("1");
+    ft_lstadd_front(&my_node, ft_lstnew("2"));
+    ft_lstadd_front(&my_node, ft_lstnew("3"));
+    ft_lstadd_front(&my_node, ft_lstnew("3"));
+    ft_lstadd_front(&my_node, ft_lstnew("3"));
+    printf("%d\n", ft_lstsize(my_node));
+    return (0);
+} */
+
+/*     LSTLAST
+
+    int main(void)
+{
+    t_list  *my_node = ft_lstnew("last");
+    ft_lstadd_front(&my_node, ft_lstnew("2"));
+    ft_lstadd_front(&my_node, ft_lstnew("3"));
+    ft_lstadd_front(&my_node, ft_lstnew("3"));
+    ft_lstadd_front(&my_node, ft_lstnew("first"));
+    printf("%s\n", (char *)ft_lstlast(my_node)->content);
+    return (0);
+}
+  */   
+    
+/*     LSTADD_BACK
+
+
+int main(void)
+{
+    t_list  *head = ft_lstnew("1st");
+    ft_lstadd_back(&head, ft_lstnew("2nd"));
+    ft_lstadd_back(&head, ft_lstnew("3rd"));
+    t_list  *temp = head;
+    while (temp)
+    {
+        printf("%s\n", (char *)temp->content);
+        temp = temp->next;
+    }
+    return (0);
+} */
+
+/*     LSTDELONE
+
+
+static void print_list(t_list *lst)
+{
+    while (lst)
+    {
+        printf("%s\n", (char *)lst->content);
+        lst = lst->next;
+    }
+}
+
+
+static void del_content(void *content)
+{
+    free(content);
+}
+
+int main(void)
+{
+    t_list *my_node = ft_lstnew(("hehehe"));
+    ft_lstadd_back(&my_node, ft_lstnew(ft_strdup("The one that needs to be deleted")));
+    ft_lstadd_back(&my_node, ft_lstnew("hehehe"));
+    ft_lstadd_back(&my_node, ft_lstnew("hehehe"));
+    print_list(my_node);
+    ft_lstdelone(my_node->next, del_content);
+    printf("After deletion:\n"); // seg fault would show since now the content is NULL
+    print_list(my_node);
+    return (0);
+
+} */
+
+/*     LSTCLEAR
+
+
+void del_content(void *content)
+{
+    free(content);
+}
+
+int main(void)
+{
+    t_list *my_node = ft_lstnew(strdup("1"));
+    ft_lstadd_back(&my_node, ft_lstnew(strdup("2")));
+    ft_lstadd_back(&my_node, ft_lstnew(strdup("3")));
+
+    ft_lstclear(&my_node, del_content);
+    printf("%p\n", (void *)my_node); // print (nil) which shows when the lst is NULL
+}
+
+ */
+
+/*     LSTITER
+
+
+static void print_content(void *content)
+{
+    printf("%s\n", (char *)content);
+}
+
+int main(void)
+{
+    t_list *my_node = ft_lstnew("1st");
+    ft_lstadd_back(&my_node, ft_lstnew("2nd"));
+    ft_lstadd_back(&my_node, ft_lstnew("3rd"));
+    ft_lstiter(my_node, print_content);
+} */
+
+/* 
+    LSTMAP
+
+static void    del_content(void *content)
+{
+    free(content);
+}
+
+static void    *to_upper(void *content)
+{
+    char    *str;
+    char    *original;
+
+    str = (char *)content;
+    original = str;
+    while (*str)
+    {
+        *str = ft_toupper(*str);
+        str++;
+    }    
+    return (original);
+
+}
+
+
+int main(void)
+{
+    t_list  *my_node = ft_lstnew(ft_strdup("hello"));
+    ft_lstadd_back(&my_node, ft_lstnew(ft_strdup("thank")));
+    ft_lstadd_back(&my_node, ft_lstnew(ft_strdup("you")));
+    ft_lstadd_back(&my_node, ft_lstnew(ft_strdup("veri")));
+    ft_lstadd_back(&my_node, ft_lstnew(ft_strdup("nhieu")));
+    
+    t_list  *new_list = ft_lstmap(my_node, to_upper, del_content);
+    t_list  *current = new_list;
+
+    while (current)
+    {
+        printf("%s\n", (char *)current->content);
+        current = current->next;
+    }
+    return (0);
+} */
