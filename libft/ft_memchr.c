@@ -6,7 +6,7 @@
 /*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:51:08 by thantran          #+#    #+#             */
-/*   Updated: 2024/11/16 15:51:09 by thantran         ###   ########.fr       */
+/*   Updated: 2024/11/19 17:33:19 by thantran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	p = (const unsigned char *)s;
 	while (n--)
 	{
-		if (*p == (char)c)
+		if (*p == (unsigned char)c)
 			return ((void *)p);
 		p++;
 	}
