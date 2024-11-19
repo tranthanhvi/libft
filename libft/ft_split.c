@@ -6,7 +6,7 @@
 /*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:54:05 by thantran          #+#    #+#             */
-/*   Updated: 2024/11/16 15:54:17 by thantran         ###   ########.fr       */
+/*   Updated: 2024/11/19 20:42:10 by thantran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,31 +43,51 @@ static char	*ft_strndup(const char *s, size_t n)
 	return (dup);
 }
 
+static void	*ft_free_array(char **array, size_t size)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < size)
+		free(array[i++]);
+	free(array);
+	return (NULL);
+}
+
+static char	*ft_extract_word(const char **s, char c)
+{
+	size_t	len;
+	char	*word;
+
+	while (**s == c)
+		(*s)++;
+	len = 0;
+	while ((*s)[len] && (*s)[len] != c)
+		len++;
+	word = ft_strndup(*s, len);
+	*s += len;
+	return (word);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
 	size_t	i;
-	size_t	word_len;
+	size_t	words;
 
-	i = 0;
-	array = malloc((ft_count_words(s, c) + 1) * sizeof(char *));
+	if (!s)
+		return (NULL);
+	words = ft_count_words(s, c);
+	array = malloc((words + 1) * sizeof(char *));
 	if (!array)
 		return (NULL);
-	while (*s)
+	i = 0;
+	while (i < words)
 	{
-		while (*s == c)
-			s++;
-		word_len = 0;
-		while (s[word_len] && s[word_len] != c)
-			word_len++;
-		if (word_len > 0)
-		{
-			array[i] = ft_strndup(s, word_len);
-			if (!array[i])
-				return (NULL);
-			i++;
-		}
-		s += word_len;
+		array[i] = ft_extract_word(&s, c);
+		if (!array[i])
+			return (ft_free_array(array, i));
+		i++;
 	}
 	array[i] = NULL;
 	return (array);
