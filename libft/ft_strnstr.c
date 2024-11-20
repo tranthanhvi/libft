@@ -6,7 +6,7 @@
 /*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:57:29 by thantran          #+#    #+#             */
-/*   Updated: 2024/11/19 20:26:33 by thantran         ###   ########.fr       */
+/*   Updated: 2024/11/20 19:27:31 by thantran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	i;
 	size_t	j;
 
+	if (!big && !len)
+		return (NULL);
 	if (*little == '\0')
 		return ((char *)big);
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:50:40 by thantran          #+#    #+#             */
-/*   Updated: 2024/11/20 17:39:49 by thantran         ###   ########.fr       */
+/*   Updated: 2024/11/20 17:43:46 by thantran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lstclear_bonus(t_list **lst, void (*del)(void *))
 	while (*lst)
 	{
 		temp = (*lst)->next;
-		ft_lstdelone(*lst, del);
+		ft_lstdelone_bonus(*lst, del);
 		*lst = temp;
 	}
 	*lst = NULL;

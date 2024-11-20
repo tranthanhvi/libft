@@ -6,7 +6,7 @@
 /*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:55:13 by thantran          #+#    #+#             */
-/*   Updated: 2024/11/20 17:00:58 by thantran         ###   ########.fr       */
+/*   Updated: 2024/11/20 19:30:31 by thantran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t		slen;
 	size_t		i;
 
-	dlen = ft_strlen(dst);
+	if ((!dst || !src) && size == 0)
+		return (0);
+	if (dst)	
+		dlen = ft_strlen(dst);
+	else
+		dlen = 0;
 	slen = ft_strlen(src);
 	if (size <= dlen)
 		return (size + slen);
