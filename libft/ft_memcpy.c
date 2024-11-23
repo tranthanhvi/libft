@@ -6,7 +6,7 @@
 /*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:51:24 by thantran          #+#    #+#             */
-/*   Updated: 2024/11/20 19:40:26 by thantran         ###   ########.fr       */
+/*   Updated: 2024/11/20 19:56:55 by thantran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char		*d;
 	const unsigned char	*s ;
-	
+
 	if (!dest && !src)
 		return (NULL);
 	d = (unsigned char *)dest;
