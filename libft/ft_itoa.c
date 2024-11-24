@@ -6,7 +6,7 @@
 /*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:50:05 by thantran          #+#    #+#             */
-/*   Updated: 2024/11/18 18:13:43 by thantran         ###   ########.fr       */
+/*   Updated: 2024/11/24 17:34:08 by thantran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ char	*ft_itoa(int n)
 	int				len;
 	unsigned int	num;
 
+	if (n == INT_MIN)
+		return (ft_strdup("-2147483648"));
 	len = ft_numlen(n);
 	if (n < 0)
 		num = -n;
@@ -45,7 +47,7 @@ char	*ft_itoa(int n)
 	str[len--] = '\0';
 	if (n == 0)
 		str[0] = '0';
-	else
+	else if (n < 0)
 		str[0] = '-';
 	while (num != 0)
 	{

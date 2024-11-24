@@ -6,7 +6,7 @@
 /*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:55:31 by thantran          #+#    #+#             */
-/*   Updated: 2024/11/16 15:55:31 by thantran         ###   ########.fr       */
+/*   Updated: 2024/11/24 16:41:10 by thantran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	const char	*s;
 	size_t		len;
 
 	len = 0;
-	s = src;
-	while (*s++)
+	while (src[len])
 		len++;
 	if (size)
 	{

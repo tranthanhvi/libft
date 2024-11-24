@@ -6,7 +6,7 @@
 /*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:46:33 by thantran          #+#    #+#             */
-/*   Updated: 2024/11/16 15:48:25 by thantran         ###   ########.fr       */
+/*   Updated: 2024/11/24 17:03:47 by thantran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,9 @@ int	ft_atoi(const char *nptr)
 	}
 	while (*nptr >= '0' && *nptr <= '9')
 		result = result * 10 + (*nptr++ - '0');
+	if (result * sign > INT_MAX)
+		return (-1);
+	else if (result * sign < INT_MIN)
+		return (0);
 	return (result * sign);
 }

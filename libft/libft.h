@@ -6,7 +6,7 @@
 /*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 23:49:04 by thantran          #+#    #+#             */
-/*   Updated: 2024/11/20 20:10:42 by thantran         ###   ########.fr       */
+/*   Updated: 2024/11/24 18:08:27 by thantran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <string.h>
+# include <limits.h>
+# include <stdint.h>
 
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
